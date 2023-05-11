@@ -1,3 +1,4 @@
+
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
@@ -18,21 +19,21 @@
 #define BUF_FLUSH -1
 
 /* for command chaining */
-#define CMD_NORM    0
-#define CMD_OR        1
-#define CMD_AND        2
-#define CMD_CHAIN    3
+#define CMD_NORM	0
+#define CMD_OR		1
+#define CMD_AND		2
+#define CMD_CHAIN	3
 
 /* for convert_number() */
-#define CONVERT_LOWERCASE    1
-#define CONVERT_UNSIGNED    2
+#define CONVERT_LOWERCASE	1
+#define CONVERT_UNSIGNED	2
 
 /* 1 if using system getline() */
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
-#define HIST_FILE    ".simple_shell_history"
-#define HIST_MAX    4096
+#define HIST_FILE	".simple_shell_history"
+#define HIST_MAX	4096
 
 extern char **environ;
 
@@ -43,7 +44,6 @@ extern char **environ;
  * @str: a string
  * @next: points to the next node
  */
-
 typedef struct liststr
 {
 	int num;
@@ -73,7 +73,6 @@ typedef struct liststr
  * @readfd: the fd from which to read line input
  * @histcount: the history line number count
  */
-
 typedef struct passinfo
 {
 	char *arg;
@@ -99,14 +98,13 @@ typedef struct passinfo
 
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-	0, 0, 0}
+		0, 0, 0}
 
 /**
  * struct builtin - contains a builtin string and related function
  * @type: the builtin command flag
  * @func: the function
  */
-
 typedef struct builtin
 {
 	char *type;
@@ -195,13 +193,6 @@ void clear_info(info_t *);
 void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
-/* toem_lists.c */
-list_t *add_node(list_t **, const char *, int);
-list_t *add_node_end(list_t **, const char *, int);
-size_t print_list_str(const list_t *);
-int delete_node_at_index(list_t **, unsigned int);
-void free_list(list_t **);
-
 /* toem_environ.c */
 char *_getenv(info_t *, const char *);
 int _myenv(info_t *);
@@ -220,6 +211,13 @@ int write_history(info_t *info);
 int read_history(info_t *info);
 int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
+
+/* toem_lists.c */
+list_t *add_node(list_t **, const char *, int);
+list_t *add_node_end(list_t **, const char *, int);
+size_t print_list_str(const list_t *);
+int delete_node_at_index(list_t **, unsigned int);
+void free_list(list_t **);
 
 /* toem_lists1.c */
 size_t list_len(const list_t *);
