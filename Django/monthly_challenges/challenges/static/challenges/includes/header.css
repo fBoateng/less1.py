@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    height: 5rem;
+    background-color: #35353535;
+}
+
+header nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    color: blanchedalmond;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav a:hover,:active{
+    color: rgb(168, 69, 130);
+}
