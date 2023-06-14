@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    My Blog
+{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock css_files %}
+    
+{% block content %}
+    <header id='main-navigation'>
+        <h1><a href="">New Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id='welcome'>
+        <header>
+            <img src="" alt="Max - The Author" srcset="">
+            <h2>Maximilian's Blog</h2>
+        </header>
+        <p>Hi, I am Max and to blog about the world</p>
+
+    </section>
+
+    <section id='latest-posts'>
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class='post'>
+                  <a href="">
+                    <img src="" alt="Mountain Hiking">
+                    <div class='post__content'>
+                        <h3>Mountain Hiking</h3>
+                        <p>
+                            There's nothing like the views you get when hiking.
+                        </p>
+                    </div>
+                  </a>  
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id='about'>
+        <h2>What I Do</h2>
+        <p>I Love To Help</p>
+
+    </section>
+{% endblock content %}
+
