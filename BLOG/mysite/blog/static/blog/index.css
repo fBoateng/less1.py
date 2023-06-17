@@ -61,8 +61,9 @@
 #about {
   text-align: center;
   padding: 3rem;
-  background-color: #38f00050;
+  background-color:  #38f00050;
   margin-top: 5rem;
+  background: linear-gradient(to left bottom, #d2f72db0, #46e05be1);
 }
 
 #about h2 {

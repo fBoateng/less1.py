@@ -39,10 +39,10 @@ h3 {
 
 #main-navigation a:hover,
 #main-navigation a:active {
-  color: #c5004273;
+  color: #c5000073;
 }
 
 #main-navigation h1 a:hover,
 #main-navigation h1 a:active {
-  color: rgba(255, 41, 41, 0.253);
+  color: rgba(255, 243, 243, 0.253);
 }
