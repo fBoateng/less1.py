@@ -19,13 +19,9 @@
 
         <ul>
             <ul>
+              {% for post in all_posts %}
                 {% include 'blog/includes/post.html' %}
-                {% include 'blog/includes/post.html' %}
-                {% include 'blog/includes/post.html' %}
-                {% include 'blog/includes/post.html' %}
-                {% include 'blog/includes/post.html' %}
-                {% include 'blog/includes/post.html' %}
-                {% include 'blog/includes/post.html' %}
+              {% endfor %}
             </ul>
         </ul>
     </section>
